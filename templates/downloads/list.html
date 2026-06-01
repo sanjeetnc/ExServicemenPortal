@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+
+<section class="bg-gradient-to-r from-blue-900 via-blue-800 to-green-700 py-20">
+
+    <div class="container mx-auto px-6 text-center text-white">
+
+        <h1 class="text-5xl font-bold">
+            Downloads
+        </h1>
+
+        <p class="mt-4 text-xl">
+            Forms, Welfare Documents and Official Resources
+        </p>
+
+    </div>
+
+</section>
+
+<section class="py-20 bg-slate-50">
+
+    <div class="container mx-auto px-6">
+
+        <!-- Filters -->
+
+        <div class="flex flex-wrap gap-3 mb-10">
+
+            <a href="{% url 'download_list' %}"
+               class="px-4 py-2 bg-blue-900 text-white rounded-lg">
+                All
+            </a>
+
+            <a href="?category=forms"
+               class="px-4 py-2 bg-white rounded-lg shadow">
+                Forms
+            </a>
+
+            <a href="?category=pension"
+               class="px-4 py-2 bg-white rounded-lg shadow">
+                Pension
+            </a>
+
+            <a href="?category=welfare"
+               class="px-4 py-2 bg-white rounded-lg shadow">
+                Welfare
+            </a>
+
+            <a href="?category=education"
+               class="px-4 py-2 bg-white rounded-lg shadow">
+                Education
+            </a>
+
+        </div>
+
+        <!-- Downloads List -->
+
+        <div class="space-y-6">
+
+            {% for item in downloads %}
+
+            <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col md:flex-row justify-between items-center">
+
+                <div>
+
+                    <h2 class="text-xl font-bold">
+                        {{ item.title }}
+                    </h2>
+
+                    <p class="text-slate-500 mt-2">
+                        {{ item.description }}
+                    </p>
+
+                    <span class="inline-block mt-3 text-sm bg-slate-100 px-3 py-1 rounded-full">
+                        {{ item.get_category_display }}
+                    </span>
+
+                </div>
+
+                <a
+                    href="{{ item.file.url }}"
+                    download
+                    class="mt-4 md:mt-0 bg-blue-900 text-white px-6 py-3 rounded-lg hover:bg-blue-800"
+                >
+                    Download
+                </a>
+
+            </div>
+
+            {% empty %}
+
+            <div class="text-center py-20">
+
+                <h2 class="text-2xl font-semibold">
+                    No Downloads Available
+                </h2>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

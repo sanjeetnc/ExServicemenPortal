@@ -1,0 +1,267 @@
+{% load static %}
+{% load i18n %}
+
+<nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-slate-200">
+
+<div class="container mx-auto px-4 lg:px-6">
+
+    <div class="flex justify-between items-center h-24">
+
+        <!-- Logo -->
+<a href="/" class="flex items-center gap-4">
+
+    <img
+    src="{% static 'images/lg.png' %}"
+    alt="Portal Logo"
+    class="h-20 w-20 object-cover rounded-xl shadow-md"
+    >
+
+    <div>
+
+        <h1 class="text-xl font-bold text-blue-950">
+            Ex-Servicemen Welfare Portal
+        </h1>
+
+        <p class="text-sm text-gray-600">
+            Jai Jawan Jai Kisan Trust
+        </p>
+
+        <span class="text-xs font-semibold text-yellow-600 uppercase tracking-wider">
+            Welfare Support Portal
+        </span>
+
+    </div>
+
+</a>
+        <!-- Desktop Menu -->
+
+        <div class="hidden lg:flex items-center gap-8 font-medium">
+
+            <a href="/" class="relative hover:text-blue-900 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">
+                {% trans "Home" %}
+            </a>
+
+            <a href="{% url 'about' %}" class="relative hover:text-blue-900 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">
+                {% trans "About Us" %}
+            </a>
+
+            <a href="{% url 'welfare_list' %}" class="relative hover:text-blue-900 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">
+                {% trans "Welfare Schemes" %}
+            </a>
+
+            <a href="{% url 'download_list' %}" class="relative hover:text-blue-900 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">
+                {% trans "Downloads" %}
+            </a>
+
+            <a href="{% url 'circular_list' %}" class="relative hover:text-blue-900 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">
+                {% trans "Circulars" %}
+            </a>
+
+            <a href="{% url 'news_list' %}" class="relative hover:text-blue-900 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">
+                {% trans "News" %}
+            </a>
+
+            <a href="{% url 'trust_list' %}" class="relative hover:text-blue-900 transition duration-300 after:absolute after:left-0 after:-bottom-2 after:w-0 after:h-0.5 after:bg-yellow-500 hover:after:w-full after:transition-all">
+                {% trans "Trust Activities" %}
+            </a>
+
+            <a href="{% url 'contact' %}"
+               class="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-2.5 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                {% trans "Contact Us" %}
+            </a>
+
+        </div>
+
+        <!-- Language -->
+
+        <form action="{% url 'set_language' %}" method="post">
+
+            {% csrf_token %}
+
+            <input
+                name="next"
+                type="hidden"
+                value="{{ request.path }}"
+            >
+
+            {% get_current_language as LANGUAGE_CODE %}
+
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+
+                <input
+                    type="hidden"
+                    name="next"
+                    value="{{ request.path }}"
+                >
+
+                <select
+                    name="language"
+                    onchange="this.form.submit()"
+                    class="border border-slate-300 rounded-xl px-4 py-2 bg-white"
+                >
+
+                    <option value="en"
+                        {% if LANGUAGE_CODE == "en" %}selected{% endif %}>
+                        English
+                    </option>
+
+                    <option value="hi"
+                        {% if LANGUAGE_CODE == "hi" %}selected{% endif %}>
+                        हिन्दी
+                    </option>
+
+                    <option value="ta"
+                        {% if LANGUAGE_CODE == "ta" %}selected{% endif %}>
+                        தமிழ்
+                    </option>
+
+                </select>
+
+            </form>
+
+        </form>
+
+        <!-- Mobile Menu Button -->
+
+        <button
+            id="menu-btn"
+            class="lg:hidden w-11 h-11 flex items-center justify-center rounded-lg bg-blue-900 text-white text-2xl shadow-md"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</div>
+
+
+</nav>
+
+<!-- Overlay -->
+
+<div
+id="menu-overlay"
+class="fixed inset-0 bg-black/50 opacity-0 invisible transition-all duration-300 z-[60]"
+></div>
+
+<!-- Mobile Menu -->
+
+<div
+id="mobile-menu"
+class="fixed top-0 right-[-100%] w-[85%] max-w-sm h-screen bg-white shadow-2xl transition-all duration-300 ease-out z-[70]"
+>
+
+
+<div class="p-6 border-b">
+
+    <div class="flex justify-between items-center">
+
+        <div>
+
+            <h2 class="font-bold text-blue-900 text-xl">
+                {% trans "Ex-Servicemen Welfare" %}
+            </h2>
+
+            <p class="text-sm text-gray-500">
+                Jai Jawan Jai Kisan Trust
+            </p>
+
+        </div>
+
+        <button
+        id="close-menu"
+        class="w-10 h-10 rounded-lg bg-slate-100 text-2xl"
+        >
+            ✕
+        </button>
+
+    </div>
+
+</div>
+
+<div class="p-6">
+
+    <div class="bg-blue-900 text-white rounded-2xl p-5 mb-8">
+
+        <h3 class="font-bold text-lg">
+            🇮🇳 Jai Jawan • Jai Kisan • Jai Hind
+        </h3>
+
+        <p class="text-sm text-blue-100 mt-2">
+            {% trans "Serving Veterans, Supporting Farmers and Building Stronger Communities." %}
+        </p>
+
+    </div>
+
+    <div class="flex flex-col gap-5 text-lg font-medium">
+
+        <a href="/" class="hover:text-blue-900 transition">
+            {% trans "Home" %}
+        </a>
+
+        <a  href="{% url 'about' %}" class="hover:text-blue-900 transition">
+            {% trans "About Us" %}
+        </a>
+
+        <a href="{% url 'welfare_list' %}" class="hover:text-blue-900 transition">
+            {% trans "Welfare Schemes" %}
+        </a>
+
+        <a href="{% url 'download_list' %}">
+            {% trans "Downloads" %}
+        </a>
+
+        <a href="{% url 'circular_list' %}">
+            {% trans "Circulars" %}
+        </a>
+
+        <a href="{% url 'news_list' %}">
+            {% trans "News" %}
+        </a>
+
+        <a href="{% url 'trust_list' %}">
+            {% trans "Trust Activities" %}
+        </a>
+
+        <a href="{% url 'contact' %}">
+            {% trans "Contact Us" %}
+        </a>
+
+    </div>
+
+</div>
+
+
+</div>
+
+<script>
+
+const menuBtn = document.getElementById('menu-btn');
+const closeBtn = document.getElementById('close-menu');
+const mobileMenu = document.getElementById('mobile-menu');
+const menuOverlay = document.getElementById('menu-overlay');
+
+function openMenu() {
+    mobileMenu.style.right = "0";
+    menuOverlay.classList.remove('opacity-0','invisible');
+}
+
+function closeMenu() {
+    mobileMenu.style.right = "-100%";
+    menuOverlay.classList.add('opacity-0','invisible');
+}
+
+if (menuBtn) {
+    menuBtn.addEventListener('click', openMenu);
+}
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', closeMenu);
+}
+
+if (menuOverlay) {
+    menuOverlay.addEventListener('click', closeMenu);
+}
+
+</script>

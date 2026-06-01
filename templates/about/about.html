@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+{% trans "About Us" %}
+<!-- Hero -->
+
+<section class="bg-gradient-to-r from-blue-900 via-blue-800 to-green-700 py-24">
+
+    <div class="container mx-auto px-6 text-center text-white">
+
+        <h1 class="text-5xl lg:text-6xl font-bold">
+            About Us
+        </h1>
+
+        <p class="mt-5 text-xl max-w-3xl mx-auto">
+            Dedicated to the welfare of Ex-Servicemen,
+            supporting farmers and strengthening communities.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- About Organization -->
+
+<section class="py-24 bg-white">
+
+    <div class="container mx-auto px-6">
+
+        <div class="max-w-5xl mx-auto">
+
+            <h2 class="text-4xl font-bold text-slate-900 mb-8">
+                Ex-Servicemen Welfare &
+                Jai Jawan Jai Kisan Trust
+            </h2>
+
+            <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                The Ex-Servicemen Welfare & Jai Jawan Jai Kisan Trust
+                is committed to serving veterans, supporting farmers,
+                and creating sustainable community development initiatives.
+            </p>
+
+            <p class="text-lg text-slate-600 leading-relaxed">
+                Through welfare schemes, healthcare support,
+                pension assistance, educational initiatives,
+                farmer development programs and trust activities,
+                we strive to improve lives and build stronger communities.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Mission & Vision -->
+
+<section class="py-24 bg-slate-50">
+
+    <div class="container mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <div class="bg-white p-8 rounded-3xl shadow-lg">
+
+                <h3 class="text-3xl font-bold text-blue-900 mb-4">
+                    Mission
+                </h3>
+
+                <p class="text-slate-600">
+                    To provide welfare support, guidance,
+                    opportunities and assistance to veterans,
+                    farmers and their families.
+                </p>
+
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-lg">
+
+                <h3 class="text-3xl font-bold text-green-700 mb-4">
+                    Vision
+                </h3>
+
+                <p class="text-slate-600">
+                    To create empowered communities where
+                    veterans and farmers receive the support,
+                    recognition and opportunities they deserve.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Leadership & Organizational Framework -->
+
+<section class="py-24 bg-slate-50">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <!-- Heading -->
+
+        <div class="text-center mb-16">
+
+            <div class="w-24 h-1 bg-yellow-400 mx-auto rounded-full mb-6"></div>
+
+            <h2 class="text-5xl font-bold text-slate-900">
+                Leadership & Organizational Framework
+            </h2>
+
+            <p class="text-gray-600 text-lg mt-4 max-w-3xl mx-auto">
+                Understanding the leadership structure and organizational framework
+                guiding the welfare initiatives of the Bench of Tamil Nadu
+                Ex-Servicemen for Justice and Jai Jawan Jai Kisan Trust.
+            </p>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="grid lg:grid-cols-2 gap-10">
+
+            <!-- TN Ex-Servicemen for Justice -->
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
+
+                <div class="bg-blue-900 text-white p-6">
+
+                    <h3 class="text-3xl font-bold">
+                        Bench of Tamil Nadu Ex-Servicemen for Justice
+                    </h3>
+
+                    <p class="text-blue-100 mt-2">
+                        Leadership & Administrative Structure
+                    </p>
+
+                </div>
+
+                <div class="p-6">
+
+                    <img
+                    src="{% static 'images/tnesm.png' %}"
+                    alt="Bench of Tamil Nadu Ex-Servicemen for Justice"
+                    class="w-full h-[650px] object-contain bg-slate-100 rounded-2xl"
+                    >
+
+                </div>
+
+                <div class="px-6 pb-8">
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Organizational hierarchy and institutional framework
+                        dedicated to protecting the rights, welfare and dignity
+                        of Ex-Servicemen across Tamil Nadu.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Jai Jawan Jai Kisan Trust -->
+
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
+
+                <div class="bg-yellow-400 p-6">
+
+                    <h3 class="text-3xl font-bold text-black">
+                        Jai Jawan Jai Kisan Trust
+                    </h3>
+
+                    <p class="text-slate-700 mt-2">
+                        Trust Structure & Welfare Administration
+                    </p>
+
+                </div>
+
+                <div class="p-6">
+
+                    <img
+                    src="{% static 'images/jjjk.png' %}"
+                    alt="Jai Jawan Jai Kisan Trust"
+                    class="w-full h-[650px] object-contain bg-slate-100 rounded-2xl"
+                    >
+
+                </div>
+
+                <div class="px-6 pb-8">
+
+                    <p class="text-gray-600 leading-relaxed">
+                        Administrative and leadership structure supporting
+                        welfare initiatives, farmer empowerment programmes,
+                        community development and veteran support activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

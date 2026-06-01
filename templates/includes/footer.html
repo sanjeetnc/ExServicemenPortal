@@ -1,0 +1,310 @@
+{% load i18n %}
+
+<footer class="bg-blue-950 text-white">
+
+
+<!-- Main Footer -->
+
+<div class="container mx-auto px-6 py-16">
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+        <!-- About -->
+
+        <div>
+
+            <div class="flex items-center gap-3 mb-5">
+
+                <div class="w-12 h-12 rounded-full bg-yellow-400 flex items-center justify-center text-black font-bold text-lg">
+                    ES
+                </div>
+
+                <div>
+
+                    <h2 class="font-bold text-xl">
+                        {% trans "Ex-Servicemen Welfare" %}
+                    </h2>
+
+                    <p class="text-xs text-gray-300">
+                        Jai Jawan Jai Kisan Trust
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p class="text-gray-300 leading-relaxed">
+
+                {% blocktrans %}
+                Dedicated to the welfare, dignity and empowerment of
+                Ex-Servicemen, farmers and rural communities through
+                welfare schemes, awareness programmes, healthcare support,
+                education initiatives and public service activities.
+                {% endblocktrans %}
+
+            </p>
+
+            <div class="mt-5 inline-flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
+
+                🇮🇳 Jai Jawan • Jai Kisan • Jai Hind
+
+            </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div>
+
+            <h3 class="font-bold text-lg mb-5 text-yellow-400">
+
+                {% trans "Quick Links" %}
+
+            </h3>
+
+            <ul class="space-y-3">
+
+                <li>
+                    <a href="/" class="hover:text-yellow-400 transition">
+                        {% trans "Home" %}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/about/" class="hover:text-yellow-400 transition">
+                        {% trans "About Us" %}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/welfare/" class="hover:text-yellow-400 transition">
+                        {% trans "Welfare Schemes" %}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/downloads/" class="hover:text-yellow-400 transition">
+                        {% trans "Downloads" %}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/circulars/" class="hover:text-yellow-400 transition">
+                        {% trans "Circulars" %}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/news/" class="hover:text-yellow-400 transition">
+                        {% trans "News" %}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/trust/" class="hover:text-yellow-400 transition">
+                        {% trans "Trust Activities" %}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/contact/" class="hover:text-yellow-400 transition">
+                        {% trans "Contact Us" %}
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Services -->
+
+        <div>
+
+            <h3 class="font-bold text-lg mb-5 text-yellow-400">
+
+                {% trans "Welfare Services" %}
+
+            </h3>
+
+            <ul class="space-y-3 text-gray-300">
+
+                <li> {% trans "Veteran Welfare" %}</li>
+
+                <li>{% trans "Pension Assistance" %}</li>
+
+                <li> {% trans "Healthcare Support" %}</li>
+
+                <li> {% trans "Educational Assistance" %}</li>
+
+                <li> {% trans "Employment Guidance" %}</li>
+
+                <li> {% trans "Forms & Downloads" %}</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div>
+
+            <h3 class="font-bold text-lg mb-5 text-yellow-400">
+
+                {% trans "Contact Information" %}
+
+            </h3>
+
+            <div class="space-y-4 text-gray-300">
+
+                <p>
+
+                    {% trans "Location" %}:  Office
+                    <br>
+                    Tamil Nadu, India
+
+                </p>
+
+                <p>
+
+                   {% trans "Phone" %}: +91 6381703506
+
+                </p>
+
+                <p>
+
+                    {% trans "Email" %}: supportjjjk@gmail.com
+
+                </p>
+
+                <p>
+
+                     {% trans "Monday - Friday" %}
+                    <br>
+                   {% trans "Office Hours" %} :9:00 AM - 5:00 PM
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Trust Section -->
+
+<div class="border-t border-blue-800">
+
+    <div class="container mx-auto px-6 py-10">
+
+        <div class="grid lg:grid-cols-3 gap-8">
+
+            <div class="bg-blue-900 rounded-2xl p-6">
+
+                <div class="text-4xl mb-3">
+                    
+                </div>
+
+                <h3 class="font-bold text-lg mb-2">
+
+                    {% trans "Farmer Welfare" %}
+
+                </h3>
+
+                <p class="text-gray-300 text-sm">
+
+                    {% blocktrans %}
+                    Supporting farmers through awareness programmes,
+                    welfare initiatives and community development.
+                    {% endblocktrans %}
+                </p>
+
+            </div>
+
+            <div class="bg-blue-900 rounded-2xl p-6">
+
+                <div class="text-4xl mb-3">
+                    
+                </div>
+
+                <h3 class="font-bold text-lg mb-2">
+
+                    {% trans "Medical Camps" %}
+
+                </h3>
+
+                <p class="text-gray-300 text-sm">
+                {% blocktrans %}
+                Organising healthcare camps and wellness
+                programmes for veterans and communities.
+                {% endblocktrans %}
+                </p>
+
+            </div>
+
+            <div class="bg-blue-900 rounded-2xl p-6">
+
+                <div class="text-4xl mb-3">
+                    
+                </div>
+
+                <h3 class="font-bold text-lg mb-2">
+
+                    {% trans "Community Development" %}
+
+                </h3>
+
+                <p class="text-gray-300 text-sm">
+                {% blocktrans %}
+                Skill development, education support and
+                social welfare programmes for rural communities.
+                {% endblocktrans %}
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bottom Bar -->
+
+<div class="bg-black/20 border-t border-blue-900">
+
+    <div class="container mx-auto px-6 py-6">
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <p class="text-gray-400 text-center md:text-left">
+
+                © 2026 Ex-Servicemen Welfare & Jai Jawan Jai Kisan Trust.
+                All Rights Reserved.
+
+            </p>
+
+            <div class="flex gap-4 text-gray-400">
+
+                <a href="/about/privacy-policy/" class="hover:text-white transition">
+                    {% trans "Privacy Policy" %}
+                </a>
+
+                <a href="/about/terms/" class="hover:text-white transition">
+                    {% trans "Terms & Conditions" %}
+                </a>
+
+                <a href="/about/disclaimer/" class="hover:text-white transition">
+                    {% trans "Disclaimer" %}
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</footer>

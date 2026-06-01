@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+{% trans "Welfare Schemes" %}
+
+<section class="py-20 bg-white">
+
+    <div class="container mx-auto px-6 max-w-5xl">
+
+        <img
+            src="{{ scheme.image.url }}"
+            alt="{{ scheme.title }}"
+            class="w-full rounded-3xl mb-10"
+        >
+
+        <h1 class="text-5xl font-bold mb-6">
+            {{ scheme.title }}
+        </h1>
+
+        <div class="prose max-w-none">
+
+            <h2>Description</h2>
+            <p>{{ scheme.description }}</p>
+
+            <h2>Eligibility</h2>
+            <p>{{ scheme.eligibility }}</p>
+
+            <h2>Benefits</h2>
+            <p>{{ scheme.benefits }}</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

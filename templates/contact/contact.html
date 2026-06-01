@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+{% trans "Contact Us" %}
+
+
+
+<!-- Hero Section -->
+
+<section class="relative overflow-hidden bg-slate-900 py-24">
+
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-green-700"></div>
+
+    <div class="relative z-10 container mx-auto px-6 text-center">
+
+        <h1 class="text-5xl lg:text-6xl font-extrabold text-white drop-shadow-2xl">
+            Contact Us
+        </h1>
+
+        <p class="mt-6 text-xl text-white max-w-3xl mx-auto font-medium">
+            Serving Veterans. Supporting Farmers.
+            Building Stronger Communities.
+        </p>
+
+    </div>
+
+</section>
+<!-- Contact Section -->
+
+<section class="bg-slate-50 py-24">
+<div class="container mx-auto px-6">
+
+    <!-- Page Header -->
+
+    <div class="max-w-4xl mx-auto text-center mb-16">
+
+        <span class="inline-block bg-blue-900 text-white px-5 py-2 rounded-full text-sm font-semibold">
+
+            Ex-Servicemen Welfare & Jai Jawan Jai Kisan Trust
+
+        </span>
+
+        <h1 class="text-5xl lg:text-6xl font-bold text-slate-900 mt-6">
+
+            Submit Your Enquiry
+
+        </h1>
+
+        <p class="text-gray-600 text-lg mt-5 max-w-3xl mx-auto">
+
+            Submit your welfare, pension, healthcare, education,
+            employment or trust-related enquiry. Our support team
+            will review your request and respond as soon as possible.
+
+        </p>
+
+    </div>
+
+    <!-- Success Messages -->
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="max-w-7xl mx-auto mb-8">
+                <div class="rounded-2xl border border-green-200 bg-green-50 px-6 py-4 text-green-700 shadow-sm">
+                    {{ message }}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Main Grid -->
+
+    <div class="grid lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+
+        <!-- Support Services -->
+
+        <div class="lg:col-span-1">
+
+            <div class="bg-gradient-to-br from-blue-900 to-slate-900 text-white rounded-3xl p-8 sticky top-28 shadow-2xl">
+
+                <h2 class="text-2xl font-bold mb-6">
+
+                    Support Services
+
+                </h2>
+
+                <div class="space-y-6">
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg">
+                            Welfare Schemes
+                        </h3>
+
+                        <p class="text-blue-100 text-sm mt-2">
+                            Guidance on welfare benefits, grants and assistance programs.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg">
+                            Pension Services
+                        </h3>
+
+                        <p class="text-blue-100 text-sm mt-2">
+                            Support regarding pension claims, documentation and updates.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg">
+                            Healthcare Support
+                        </h3>
+
+                        <p class="text-blue-100 text-sm mt-2">
+                            Information and assistance related to healthcare services.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg">
+                            Educational Assistance
+                        </h3>
+
+                        <p class="text-blue-100 text-sm mt-2">
+                            Scholarships, educational grants and student support.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg">
+                            Trust Activities
+                        </h3>
+
+                        <p class="text-blue-100 text-sm mt-2">
+                            Community welfare, farmer support and social development programs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Enquiry Form -->
+
+        <div class="lg:col-span-2">
+
+            <form
+                method="POST"
+                enctype="multipart/form-data"
+                class="bg-white rounded-3xl p-8 lg:p-10 border border-slate-200 shadow-xl hover:shadow-2xl transition duration-500"
+            >
+
+                {% csrf_token %}
+
+                <div class="mb-8 border-b border-slate-200 pb-6">
+
+                    <h2 class="text-3xl font-bold text-slate-900">
+                        Enquiry Details
+                    </h2>
+
+                    <p class="text-slate-600 mt-2">
+                        Please provide accurate information so our team can assist you efficiently.
+                    </p>
+
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <div>
+
+                        <label class="block mb-2 font-medium text-slate-700">
+                            Full Name
+                        </label>
+
+                        {{ form.full_name }}
+
+                    </div>
+
+                    <div>
+
+                        <label class="block mb-2 font-medium text-slate-700">
+                            Mobile Number
+                        </label>
+
+                        {{ form.mobile }}
+
+                    </div>
+
+                    <div>
+
+                        <label class="block mb-2 font-medium text-slate-700">
+                            Email Address
+                        </label>
+
+                        {{ form.email }}
+
+                    </div>
+
+                    <div>
+
+                        <label class="block mb-2 font-medium text-slate-700">
+                            Service Number
+                        </label>
+
+                        {{ form.service_number }}
+
+                    </div>
+
+                    <div>
+
+                        <label class="block mb-2 font-medium text-slate-700">
+                            Rank
+                        </label>
+
+                        {{ form.rank }}
+
+                    </div>
+
+                    <div>
+
+                        <label class="block mb-2 font-medium text-slate-700">
+                            Category
+                        </label>
+
+                        {{ form.category }}
+
+                    </div>
+
+                </div>
+
+                <div class="mt-6">
+
+                    <label class="block mb-2 font-medium text-slate-700">
+                        Subject
+                    </label>
+
+                    {{ form.subject }}
+
+                </div>
+
+                <div class="mt-6">
+
+                    <label class="block mb-2 font-medium text-slate-700">
+                        Message
+                    </label>
+
+                    {{ form.message }}
+
+                </div>
+
+                <div class="mt-6">
+
+                    <label class="block mb-2 font-medium text-slate-700">
+                        Supporting Document
+                    </label>
+
+                    {{ form.document }}
+
+                    <p class="text-sm text-gray-500 mt-2">
+                        Upload supporting documents if applicable.
+                    </p>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="mt-8 w-full bg-gradient-to-r from-blue-900 to-green-700 hover:from-blue-800 hover:to-green-600 text-white font-semibold py-4 rounded-xl shadow-lg transition-all duration-300"
+                >
+
+                    Submit Enquiry
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+{% endblock %}

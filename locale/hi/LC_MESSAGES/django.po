@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 09:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: config/settings.py:17
+msgid "English"
+msgstr "अंग्रेज़ी"
+
+#: config/settings.py:18
+msgid "Hindi"
+msgstr "हिन्दी"
+
+#: config/settings.py:19
+msgid "Tamil"
+msgstr "तमिल"
+
+#: templates/about/about.html:5
+msgid "About Us"
+msgstr "हमारे बारे में"
+
+#: templates/contact/contact.html:4
+msgid "Contact Us"
+msgstr "संपर्क करें"
+
+#: templates/core/home.html:4
+msgid "Home"
+msgstr "होम"
+
+#: templates/welfare/detail.html:4
+#: templates/welfare/list.html:4
+msgid "Welfare Schemes"
+msgstr "कल्याण योजनाएँ"
+
+msgid "Downloads"
+msgstr "डाउनलोड"
+
+msgid "Circulars"
+msgstr "परिपत्र"
+
+msgid "News"
+msgstr "समाचार"
+
+msgid "Trust Activities"
+msgstr "ट्रस्ट गतिविधियाँ"
+
+msgid "Quick Links"
+msgstr "त्वरित लिंक"
+
+msgid "Privacy Policy"
+msgstr "गोपनीयता नीति"
+
+msgid "Terms & Conditions"
+msgstr "नियम एवं शर्तें"
+
+msgid "Disclaimer"
+msgstr "अस्वीकरण"
+
+msgid "Explore Schemes"
+msgstr "योजनाएँ देखें"
+
+msgid "Download Forms"
+msgstr "फॉर्म डाउनलोड करें"
+
+msgid "Ex-Servicemen Welfare"
+msgstr "पूर्व सैनिक कल्याण"
+
+msgid "Serving Veterans, Supporting Farmers and Building Stronger Communities."
+msgstr "पूर्व सैनिकों की सेवा, किसानों का समर्थन और मजबूत समुदायों का निर्माण।"
+
+msgid "Veteran Welfare"
+msgstr "पूर्व सैनिक कल्याण"
+
+msgid "Pension Assistance"
+msgstr "पेंशन सहायता"
+
+msgid "Healthcare Support"
+msgstr "स्वास्थ्य सहायता"
+
+msgid "Educational Assistance"
+msgstr "शैक्षिक सहायता"
+
+msgid "Employment Guidance"
+msgstr "रोजगार मार्गदर्शन"
+
+msgid "Forms & Downloads"
+msgstr "फॉर्म एवं डाउनलोड"
+
+msgid "Contact Information"
+msgstr "संपर्क जानकारी"
+
+msgid "Location"
+msgstr "स्थान"
+
+msgid "Phone"
+msgstr "फ़ोन"
+
+msgid "Email"
+msgstr "ईमेल"
+
+msgid "Monday - Friday"
+msgstr "सोमवार - शुक्रवार"
+
+msgid "Office Hours"
+msgstr "कार्यालय समय"
+
+msgid "Farmer Welfare"
+msgstr "किसान कल्याण"
+
+msgid "Medical Camps"
+msgstr "चिकित्सा शिविर"
+
+msgid "Community Development"
+msgstr "सामुदायिक विकास"
+
+msgid "All Rights Reserved."
+msgstr "सर्वाधिकार सुरक्षित।"

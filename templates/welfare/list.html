@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block content %}
+{% trans "Welfare Schemes" %}
+<section class="bg-gradient-to-r from-blue-900 via-blue-800 to-green-700 py-20">
+
+    <div class="container mx-auto px-6 text-center text-white">
+
+        <h1 class="text-5xl font-bold">
+            Welfare Schemes
+        </h1>
+
+        <p class="mt-4 text-xl">
+            Welfare programs and support services for Ex-Servicemen.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="py-20 bg-slate-50">
+
+    <div class="container mx-auto px-6">
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {% for scheme in schemes %}
+
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
+
+                <img
+                    src="{{ scheme.image.url }}"
+                    alt="{{ scheme.title }}"
+                    class="w-full h-56 object-cover"
+                >
+
+                <div class="p-6">
+
+                    <h2 class="text-2xl font-bold mb-3">
+                        {{ scheme.title }}
+                    </h2>
+
+                    <p class="text-slate-600 mb-4">
+                        {{ scheme.short_description }}
+                    </p>
+
+                    <a
+                        href="{% url 'welfare_detail' scheme.slug %}"
+                        class="inline-block bg-blue-900 text-white px-5 py-2 rounded-lg"
+                    >
+                        View Details
+                    </a>
+
+                </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-span-full text-center">
+
+                <h3 class="text-2xl font-semibold">
+                    No Welfare Schemes Available
+                </h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
