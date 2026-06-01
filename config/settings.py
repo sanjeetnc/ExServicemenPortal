@@ -40,9 +40,16 @@ SECRET_KEY = 'django-insecure-xl!u=e0-zee$minw@qg^940*2t2)y)&8wc5%k4sno(1^ijiia_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "benchofesm.in",
+    "www.benchofesm.in",
+    "exservicemenportal.onrender.com",
+]
 
-
+CSRF_TRUSTED_ORIGINS = [
+    "https://benchofesm.in",
+    "https://www.benchofesm.in",
+]
 # Application definition
 
 INSTALLED_APPS = [
